@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Gaji</title>
+    <link rel="stylesheet" href="perhitungan_gaji.css">
+</head>
+<body>
+    <div class="result-container">
+        <h2>Hasil Gaji</h2>
+        <h3>selamat atas kerja kerasmu</h3><br>
+        <p id="output-nama"></p>
+        <p id="output-nik"></p>
+        <p id="output-total-gaji"></p><br>
+        <h4>tetap semangat bekerja :)</h4>
+    </div>
+
+    <script>
+        // Mengambil query parameters dari URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const nama = urlParams.get('nama');
+        const nik = urlParams.get('nik');
+        const totalGaji = urlParams.get('totalGaji');
+
+        // Menampilkan hasil perhitungan gaji di halaman hasilgaji.html
+        document.getElementById('output-nama').innerText = `Nama: ${nama}`;
+        document.getElementById('output-nik').innerText = `NIK: ${nik}`;
+        document.getElementById('output-total-gaji').innerText = `Total Gaji: Rp. ${parseInt(totalGaji).toLocaleString()}`;
+    </script>
+</body>
+</html>

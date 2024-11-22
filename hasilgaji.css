@@ -1,0 +1,85 @@
+/* Perhitungan Gaji CSS */
+
+/* Mengatur tampilan untuk seluruh halaman */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container utama untuk hasil gaji */
+.result-container {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Heading */
+.result-container h2 {
+    color: #333333;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.result-container h3 {
+    color: #666666;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.result-container h4 {
+    color: #009688;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+/* Paragraph styling */
+.result-container p {
+    color: #b11414;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Tombol reward */
+.reward-button {
+    display: inline-block;
+    background-color:#d9f011 ;
+    color: #d9f011;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reward-button:hover {
+    background-color:#d9f011;
+}
+
+.reward-button:active {
+    background-color: #d9f011;
+}
+
+/* Responsif untuk perangkat kecil */
+@media (max-width: 600px) {
+    .result-container {
+        padding: 15px 20px;
+    }
+
+    .reward-button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}

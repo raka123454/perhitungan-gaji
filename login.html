@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    
+ <div class="login-container">
+    <div class="login-box">
+        <h2>Login</h2>
+        <p>Masuk dengan akun yang telah Anda daftarkan.</p>
+        <form id="login-form">
+            <div class="input-group">
+                <label for="username">NIK</label>
+                <input type="text" id="NIK" name="NIK" placeholder="NIK" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Kata sandi</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" name="password" required placeholder="Kata sandi">
+                    <span class="toggle-password">&#x1F441;</span> <!-- Icon Mata -->
+                  </div>
+            </div>
+            <div class="options">
+                <label>
+                    <input type="checkbox" name="remember"> Ingat akun ku
+                </label>
+                <a href="#">Lupa kata sandi mu?</a>
+            </div>
+            <button class="login-btn" type="submit">Masuk</button><br>
+        </form>
+    </div><br>
+    <p class="login">Sudah memiliki akun? <a href="daftar.html">daftar</a></p><br>
+</div>
+
+<script>
+    const passwordInput = document.getElementById("password");
+    const togglePassword = document.querySelector(".toggle-password");
+  
+    togglePassword.addEventListener("click", function () {
+      // Toggle between password and text input types
+      const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+      passwordInput.setAttribute("type", type);
+  
+      // Change icon based on visibility
+      if (type === "text") {
+        togglePassword.innerHTML = "&#x1F441;"; // Icon for visible (open eye)
+      } else {
+        togglePassword.innerHTML = "&#x1F576;"; // Icon for hidden (closed eye)
+      }
+    });
+
+    // Form submission and redirect to perhitungan_gaji.html
+    document.getElementById("login-form").addEventListener("submit", function(event) {
+        event.preventDefault();  // Prevent the form from submitting the traditional way
+        // Here you can add validation or authentication logic if needed
+        
+        // Redirect to perhitungan_gaji.html after "successful" login
+        window.location.href = "perhitungan_gaji.html";
+    });
+</script>
+
+</body>
+</html>

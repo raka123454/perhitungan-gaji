@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar</title>
+    <link rel="stylesheet" href="daftar.css">
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-box">
+            <div class="header">
+                <h2 style="display: inline-block; margin: 0;">Daftar</h2>
+                <a href="beranda.html" class="close-button">X</a>
+            </div>
+            <p>Masukkan informasi pendaftaran yang valid.</p>
+            <form id="register-form">
+                <div class="input-group">
+                    <label for="nama-lengkap">Nama lengkap</label>
+                    <input type="text" id="nama-lengkap" name="nama-lengkap" placeholder="Nama lengkap" required>
+                </div>
+                <div class="input-group">
+                    <label for="NIK">NIK</label>
+                    <input type="text" id="NIK" name="NIK" placeholder="NIK" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Kata sandi</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" name="password" placeholder="Kata sandi" required>
+                        <span class="toggle-password" onclick="togglePassword('password')">&#x1F441;</span>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="confirm-password">Konfirmasi kata sandi</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Konfirmasi kata sandi" required>
+                        <span class="toggle-password" onclick="togglePassword('confirm-password')">&#x1F441;</span>
+                    </div>
+                </div>
+                <div class="terms">
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">Saya setuju dengan <a href="#">Syarat dan Ketentuan</a> dan <a href="#">Kebijakan Privasi</a>.</label>
+                </div>
+                <button class="register-btn" type="submit">Daftar</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Fungsi untuk toggle password visibility (menyembunyikan atau menampilkan password)
+        function togglePassword(fieldId) {
+            const passwordField = document.getElementById(fieldId);
+            const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
+            passwordField.setAttribute("type", type);
+        }
+
+        // Menangani pengiriman form dan redirect ke halaman login
+        document.getElementById("register-form").addEventListener("submit", function(event) {
+            event.preventDefault();  // Mencegah pengiriman form yang default
+
+            // Anda bisa menambahkan logika validasi atau proses pendaftaran di sini (opsional)
+
+            // Redirect ke halaman login.html setelah pendaftaran selesai
+            window.location.href = "login.html";  // Mengarahkan ke login.html
+        });
+    </script>
+</body>
+</html>

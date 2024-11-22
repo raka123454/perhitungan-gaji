@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perhitungan Gaji</title>
+    <link rel="stylesheet" href="perhitungan_gaji.css">
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-box">
+            <div class="header">
+                <h2>PERHITUNGAN GAJI</h2>
+            </div>
+            <form>
+                <div class="input-group">
+                    <label for="nama-lengkap">Nama Lengkap</label>
+                    <input type="text" id="nama-lengkap" name="nama-lengkap" placeholder="Nama lengkap" required>
+                </div>
+                <div class="input-group">
+                    <label for="NIK">NIK</label>
+                    <input type="text" id="NIK" name="NIK" placeholder="NIK" required>
+                </div>
+                <div class="input-group">
+                    <label for="jumlah_hari_kerja">Jumlah Hari Kerja</label>
+                    <input type="text" id="jumlah_hari_kerja" required>
+                </div>
+                <div class="input-group">
+                    <label for="jumlah_jam_lembur">Jumlah Jam Lembur</label>
+                    <input type="text" id="jumlah_jam_lembur" required>
+                </div>
+                <button type="button" class="login-btn" onclick="perhitunganGaji()">Menghitung Gaji</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="perhitungan_gaji.js"></script>
+</body>
+</html>
